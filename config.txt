@@ -1,0 +1,16 @@
+The following are some configurations that can be given to the model chcker:
+
+add_wins set:
+
+Message <- {[op |-> "add", elem |-> 1], [op |-> "add", elem |-> 2], [op |-> "remove", elem |-> 1]}
+
+put_wins map:
+
+Message <- {[op |-> "put", elem |-> [key |-> 11, val |-> "foo", ts |-> 1]],
+[op |-> "put", elem |-> [key |-> 12, val |-> "pi", ts |-> 4]],
+[op |-> "remove", elem |-> [key |-> 11, val |-> "foo"], ts |-> 2],
+[op |-> "put", elem |-> [key |-> 12, val |-> "ko", ts |-> 3]]}
+
+
+Replica (Symmetric set) <- {p1, p2}
+Replica (Ordinary Value) <- {1,2} 
